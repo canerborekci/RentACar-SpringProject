@@ -119,7 +119,7 @@ public class CarImageManager implements CarImageService {
 
         if (counter == 0) {
             CarImageDto carImage = new CarImageDto();
-            carImage.setImagePath("C:\\Users\\caner.borekci\\Desktop\\rentACarSpring\\rentACarSpring\\Images\\default.jpg");
+            carImage.setImagePath("//Images//default.jpg");
             Date dateNow = new java.sql.Date(new java.util.Date().getTime());
             carImage.setDate(dateNow);
             List<CarImageDto> carImages = new ArrayList<CarImageDto>();
@@ -147,7 +147,7 @@ public class CarImageManager implements CarImageService {
     private File uploadImage(MultipartFile file) throws IOException {
         String randomImageName = java.util.UUID.randomUUID().toString();
 
-        File myFile = new File("C:\\Users\\caner.borekci\\Desktop\\rentACarSpring\\rentACarSpring\\Images" + "\\" + randomImageName + "."
+        File myFile = new File("//Images" + "\\" + randomImageName + "."
                 + file.getContentType().toString().substring(file.getContentType().indexOf("/") + 1));
         myFile.createNewFile();
         FileOutputStream fos = new FileOutputStream(myFile);
